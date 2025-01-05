@@ -1,0 +1,28 @@
+#instalador
+	 pyinstaller --onefile --windowed actas_app.py
+
+#Convertir de Qt Designer a .py
+pyuic5 -x archivo.ui -o archivo.py
+
+
+#Crear entorno virtual venv - en cada proyecto
+cd C:\pruebas
+python -m venv venv
+	#Activar entorno virtual
+	C:\pruebas\venv\Scripts\activate
+	#Desactivar entorno virtual
+	deactivate
+
+#Genera un archivo .txt con listado de librerias utilizadas en proyecto
+pip freeze > pre-requisitos.txt
+	#Instalar dependencias en un entorno virtual
+	pip install -r pre-requisitos.txt #Instala las mismas dependencias en su propio entorno virtual
+
+*****INSTALACION EN CLIENTE*****
+1.- MAPEAR INSTALADOR Y RUTAS
+2.- INSTALAR PYTHON
+3.- python.exe -m pip install --upgrade pip
+    pip install matplotlib 
+    pip install openpyxl #Inventario
+    pip install paramiko #logs / cámara
+    pip install fpdf
